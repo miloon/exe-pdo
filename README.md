@@ -41,6 +41,11 @@ carte cliquable en map + listes des 5 dernières recettes en aléatoire
 - continents
 - connexion
 
+[MENU ADMIN VERTICAL] => MIKE en toggle
+- accueil
+- continents => pays => recettes
+- déconnexion
+
 [FOOTER] => MIKE
 - plan du site
 - crédit (une page qui parle de nous qu'on a fait le site)
