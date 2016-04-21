@@ -38,7 +38,7 @@ carte cliquable en map + listes des 5 dernières recettes en aléatoire
 
 [MENU PUBLIC HORIZONTAL] => HAYAT
 - accueil
-- continents
+- continents => pays => recettes
 - connexion
 
 [MENU ADMIN VERTICAL] => MIKE en toggle
@@ -50,7 +50,6 @@ carte cliquable en map + listes des 5 dernières recettes en aléatoire
 - plan du site
 - crédit (une page qui parle de nous qu'on a fait le site)
 - contact (pour nous contacter en cas de bugs)
-
 
 
 +++ PAGE CONNEXION +++ => MIKE
