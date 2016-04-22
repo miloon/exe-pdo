@@ -1,9 +1,9 @@
 <?php
 
 $requete = $connexion->prepare("SELECT u.login, u.ladesc, r.id AS idrecette, r.titre AS recette
-FROM user u
+FROM util u
 INNER JOIN recette r
-ON u.id = r.user_id
+ON u.id = r.util_id
 WHERE u.id = 3;");
 
 // exécution de la requête
