@@ -5,10 +5,12 @@ if(empty($_GET)) {
     require_once "modele/accueil.php";
     require_once "vue/accueil.php";
 
-} if(empty($_GET)) {
+} elseif (isset($_GET['credit'])){
+    $contact = $_GET['credit'];
     require_once "vue/credit.php";
 
-}if(empty($_GET)){
+} elseif (isset($_GET['contact'])){
+    $contact = $_GET['contact'];
             require_once "modele/contact.php";
             require_once "vue/contact.php";
 
@@ -36,4 +38,7 @@ elseif(isset($_GET['connect'])){
 
     require_once "modele/connexion.php";
     require_once "vue/connexion.php";
+}else{
+    require_once "modele/accueil.php";
+    require_once "vue/accueil.php";
 }
