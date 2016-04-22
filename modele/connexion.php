@@ -9,7 +9,7 @@ if(!empty($_POST)) {
 // requête préparée
     $recup = $connexion->prepare("SELECT u.id,u.login,u.mdp,u.droit_id,u.ladesc,
                                         d.id as iddroit,d.lintitule,d.ecrit,d.modif,d.supp
-                                    FROM  user u
+                                    FROM   util u
                                     INNER JOIN droit d
                                     ON u.droit_id = d.id
                                      WHERE u.login <= :login AND u.mdp <= :pass");
@@ -28,11 +28,11 @@ if(!empty($_POST)) {
 
         // création de session valide
         $_SESSION['clef'] = session_id();
-        $_SESSION['idutil'] = $util->id;
-        $_SESSION['login'] = $util->login;
-        $_SESSION['ecrit'] = $util->ecrit;
-        $_SESSION['modifie'] = $util->modifi;
-        $_SESSION['supprime'] = $util->supp;
+        $_SESSION['idutil'] = $util['titre'];
+        $_SESSION['login'] = $util['login'];
+        $_SESSION['ecrit'] = $util['ecrit'];
+        $_SESSION['modifie'] = $util['modif'];
+        $_SESSION['supprime'] = $util['sup'];
 
         // redirection
         header("Location: ./");
