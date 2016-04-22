@@ -5,7 +5,7 @@
     <title><?=$titre?></title>
 </head>
 <body>
-<!-- En vrai, j'attends d'avoir le rooter-->
+<!-- En vrai, j'attends d'avoir le router et pour voir si tout fonctionne comme il le faut-->
 <?php require_once "view/menu.php" ?>
 <section>
     <article>

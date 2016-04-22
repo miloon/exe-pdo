@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,12 +20,3 @@
 
 </body>
 </html>
-=======
-<?php
-/**
- * Created by PhpStorm.
- * User: Stagiaire
- * Date: 22/04/2016
- * Time: 10:24
- */
->>>>>>> 21caf29c3f39ee1f29340b330412ab8de610752d
