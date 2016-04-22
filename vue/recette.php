@@ -8,8 +8,8 @@
 <!-- require_once "view/menu.php" ?>-->
 <section>
     <article>
-        <h1><?=$affiche_recette['recette']?></h1>
-        <p><?=$affiche_recette['recette']?></p>
+        <h1><?=$affiche_recette['titre']?></h1>
+        <p><?=nl2br($affiche_recette['recette'])?></p>
         <p><?=$affiche_recette['ladate']?></p>
     </article>
     <article>
