@@ -57,3 +57,6 @@ carte cliquable en map + listes des 5 dernières recettes en aléatoire
 [Admin Ajout d'article] => HAYAT
 
 [Admin modif/sup] => EMILY
+
+
++++ Vérification par Michaël 2016-04-22 10h00
