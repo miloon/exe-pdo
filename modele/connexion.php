@@ -26,7 +26,7 @@ if(!empty($_POST)) {
 
 
     // on a un résultat
-    if(is_null($util)){
+    if(!is_null($util)){
 
         // création de session valide
         $_SESSION['idutil'] = session_id();
