@@ -1,6 +1,6 @@
 <?php
 
-
+/*----------------premiere requete-------------------------*/
 
 
 
@@ -23,21 +23,26 @@ $recup = $connexion->prepare("SELECT p.id,p.lintitule,SUBSTRING(p.ladesc,1,200)A
 $recup->bindValue(':lid',$pays, PDO::PARAM_INT);
 
 
-
-
 // exécuter la requête
 $recup->execute();
 
 $recuptous= $recup->fetchAll(PDO::FETCH_OBJ);
 
-$cont = $connexion->query("SELECT * from pays
-                                     WHERE p.id = $pays
-                                     ORDER BY r.ladate DESC
-                                     ;
+
+/*----------------deuxieme requete-------------------------*/
+
+$cont = $connexion->prepare("SELECT * from pays
+                                     WHERE id = :lid
+
+
 
                              ");
+$cont->bindValue(':lid',$pays, PDO::PARAM_INT);
 
-
+$cont->execute();
 
 
 $continant= $cont->fetch(PDO::FETCH_OBJ);
+
+
+

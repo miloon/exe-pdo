@@ -13,7 +13,7 @@
 
 echo "<h1>".$continant->lintitule."</h1><br/>";
 echo "<p>".$continant->img."</p><br/>";
-echo "<p>".$continant->ladescpay."</p><br/>";
+echo "<p>".$continant->ladesc."</p><br/>";
 
 foreach($recuptous as $rec){
     echo "<h2>".$rec->titre."</h2><br/>";
