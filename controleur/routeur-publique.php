@@ -34,8 +34,13 @@ if(empty($_GET)) {
     require_once "modele/pays.php";
     require_once "vue/pays.php";
 }
-elseif(isset($_GET['connect'])){
+// A SUPPRIMER - c'est en attendant d'arriver à se loguer, je fais mes tests comme ça. - Mily
+elseif(isset($_GET['modifsup'])) {
 
+    require_once "modele/modifsup.php";
+    require_once "vue/modifsup.php";
+// FIN DE A SUPPRIMER - ce qu'il y a en-dessous, on laisse. - Mily
+}elseif(isset($_GET['connect'])){
     require_once "modele/connexion.php";
     require_once "vue/connexion.php";
 }else{

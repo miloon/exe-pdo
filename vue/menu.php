@@ -1,6 +1,6 @@
 <?php
 
-$cont=$connexion->prepare("SELECT *FROM continent");
+$cont=$connexion->prepare("SELECT * FROM continent");
 $cont->execute();
 
 ?>
@@ -12,6 +12,6 @@ $cont->execute();
     }
     ?>
 
-    <li><a href="deco.php">connexion</a></li>
+    <li><a href="?connect">connexion</a></li>
 </ul>
 
