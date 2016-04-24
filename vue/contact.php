@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Crédits</title>
+    <link rel="icon" type="image/png" href="vue/img/favicon.ico"/>
+    <link href="stylesheet.css" rel="stylesheet" type="text/css"/>
+    <title>Contact</title>
 </head>
 <body>
 <?php require_once "vue/menu.php"; ?>

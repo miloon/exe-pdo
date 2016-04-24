@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
+    <link rel="icon" type="image/png" href="vue/img/favicon.ico"/>
+    <link href="stylesheet.css" rel="stylesheet" type="text/css"/>
     <meta charset="UTF-8">
     <title><?=$titre?></title>
 </head>
