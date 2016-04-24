@@ -8,7 +8,7 @@
 
 </head>
 <body>
-
+<?php require_once "vue/menu.php"; ?>
 <?php
 
 echo "<h1>".$continant->lintitule."</h1><br/>";

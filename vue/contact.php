@@ -5,7 +5,7 @@
     <title>Crédits</title>
 </head>
 <body>
-<!-- require_once "vue/menu.php" ?>-->
+<?php require_once "vue/menu.php"; ?>
 <section>
     <article>
         <h2>Nous contacter</h2>
