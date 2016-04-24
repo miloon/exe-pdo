@@ -1,7 +1,7 @@
 <?php
 
+/*----------------premiere requete-------------------------*/
 
-$id = $variabledef;
 
 
 // requête préparée
@@ -13,17 +13,36 @@ $recup = $connexion->prepare("SELECT p.id,p.lintitule,SUBSTRING(p.ladesc,1,200)A
                                      INNER JOIN recette r
                                      ON p.id = r.pays_id
 
-                                     WHERE p.id = $pays
+                                     WHERE p.id = :lid
                                      ORDER BY r.ladate DESC
                                      ;
 
                              ");
 
 // attribution de valeurs
-$recup->bindValue(':lid',$id, PDO::PARAM_INT);
+$recup->bindValue(':lid',$pays, PDO::PARAM_INT);
 
 
 // exécuter la requête
 $recup->execute();
 
-$recuptous = $recup->fetch(PDO::FETCH_OBJ);
+$recuptous= $recup->fetchAll(PDO::FETCH_OBJ);
+
+
+/*----------------deuxieme requete-------------------------*/
+
+$cont = $connexion->prepare("SELECT * from pays
+                                     WHERE id = :lid
+
+
+
+                             ");
+$cont->bindValue(':lid',$pays, PDO::PARAM_INT);
+
+$cont->execute();
+
+
+$continant= $cont->fetch(PDO::FETCH_OBJ);
+
+
+

@@ -22,14 +22,15 @@ if(!empty($_POST)) {
 // exécuter la requête
     $recup->execute();
 
-    $nb = mysqli_num_rows($recup);
+    $util = $recup->fetch(PDO::FETCH_OBJ);
+
+
     // on a un résultat
-    if($nb){
-        $util = $recup->fetch(PDO::FETCH_OBJ);
+    if(!is_null($util)){
 
         // création de session valide
-        $_SESSION['clef'] = session_id();
-        $_SESSION['idutil'] = $util['titre'];
+        $_SESSION['idutil'] = session_id();
+        $_SESSION['id'] = $util['id'];
         $_SESSION['login'] = $util['login'];
         $_SESSION['ecrit'] = $util['ecrit'];
         $_SESSION['modifie'] = $util['modif'];

@@ -11,14 +11,14 @@
 <?php require_once "vue/menu.php"; ?>
 <?php
 
-echo "<h1>".$recuptous['lintitule']."</h1><br/>";
-echo "<p>".$recuptous['img']."</p><br/>";
-echo "<p>".$recuptous['ladescpay']."</p><br/>";
+echo "<h1>".$continant->lintitule."</h1><br/>";
+echo "<p>".$continant->img."</p><br/>";
+echo "<p>".$continant->ladesc."</p><br/>";
 
-while ($recuptous){
-    echo "<h2>".$recuptous['titre']."</h2><br/>";
-    echo "<p>".$recuptous['ladate']."</p><br/>";
-    echo "<p>".$recuptous['ladescrec']."... <a href='?idrecette=" . $recuptous['idrec'] . "'>Lire la suite</a></p><hr/>";
+foreach($recuptous as $rec){
+    echo "<h2>".$rec->titre."</h2><br/>";
+    echo "<p>".$rec->ladate."</p><br/>";
+    echo "<p>".$rec->ladescrec."... <a href='?idrecette=" . $rec->idrec . "'>Lire la suite</a></p><hr/>";
     
 };
 ?>
