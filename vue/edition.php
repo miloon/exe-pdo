@@ -1,4 +1,5 @@
 <?php
+// ATTENTION je fais le modele ici histoire de pas me perdre. Je refoutrai tout ensuite dans modele.
 // si le formulaire d'édition est vide
 if(empty($_POST['edition'])) {
     // création d'une variable pour afficher le formulaire
@@ -40,7 +41,7 @@ ORDER BY p.continent_id ASC, p.lintitule ASC;
         $prepare->bindValue(":titre",$letitre,PDO::PARAM_STR);
         $prepare->bindValue(":ladesc",$ladesc,PDO::PARAM_STR);
         $prepare->bindValue(":ladate",$ladate,PDO::PARAM_STR);
-        $prepare->bindValue(":idpays",$idpays,PDO::PARAM_STR);
+        $prepare->bindValue(":idpays",$idpays,PDO::PARAM_INT);
 
     }catch (Exception $e){
         $connexion->rollBack();

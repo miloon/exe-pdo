@@ -18,5 +18,4 @@
   if(isset($erreur)) echo "<h3>$erreur</h3>";
   ?>
 </body>
-<<<<<<< HEAD
 </html>
