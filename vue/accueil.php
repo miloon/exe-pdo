@@ -5,7 +5,9 @@
     <title><?=$titre?></title>
 </head>
 <body>
-<!-- require_once "vue/menu.php" ?>-->
+<?php
+require_once "vue/menu.php";
+?>
 <section>
 
     <img alt="map.jpg" usemap="#map" src="vue/img/map.jpg"/>
