@@ -1,5 +1,6 @@
 <?php
 // ATTENTION je fais le modele ici histoire de pas me perdre. Je refoutrai tout ensuite dans modele.
+
 // si le formulaire d'édition est vide
 if(empty($_POST['edition'])) {
     // création d'une variable pour afficher le formulaire
@@ -21,7 +22,7 @@ ORDER BY p.continent_id ASC, p.lintitule ASC;
     $requetepays->execute();
 }else { // le formulaire est envoyé
     $affiche_modif = false; // on cache le formulaire de modif
-    $succes_modif = true; // on affiche le message d'insertion
+
     // et on fait les vérif'
     $letitre = htmlspecialchars(strip_tags(trim($_POST['titre'])),ENT_QUOTES);
     $ladesc = htmlspecialchars(strip_tags(trim($_POST['ladesc'])),ENT_QUOTES);
@@ -42,7 +43,7 @@ ORDER BY p.continent_id ASC, p.lintitule ASC;
         $prepare->bindValue(":ladesc",$ladesc,PDO::PARAM_STR);
         $prepare->bindValue(":ladate",$ladate,PDO::PARAM_STR);
         $prepare->bindValue(":idpays",$idpays,PDO::PARAM_INT);
-
+        $succes_modif = true; // on affiche le message de succès d'insertion
     }catch (Exception $e){
         $connexion->rollBack();
         echo "Erreur : " . $e->getMessage();
@@ -53,8 +54,10 @@ ORDER BY p.continent_id ASC, p.lintitule ASC;
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+    <link rel="icon" type="image/png" href="vue/img/favicon.ico"/>
+    <link href="stylesheet.css" rel="stylesheet" type="text/css"/>
     <meta charset="UTF-8">
-    <title>Contact</title>
+    <title>Edition d'un article</title>
 </head>
 <body>
 <?php require_once "vue/menu.php"; ?>

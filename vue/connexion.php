@@ -6,7 +6,9 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>titre</title>
+  <link rel="icon" type="image/png" href="vue/img/favicon.ico"/>
+  <link href="stylesheet.css" rel="stylesheet" type="text/css"/>
+  <title>Connexion</title>
 </head>
 <body>
 <h1>Se connecter</h1>

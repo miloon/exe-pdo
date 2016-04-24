@@ -1,7 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="vue/img/favicon.ico"/>
+    <link href="stylesheet.css" rel="stylesheet" type="text/css"/>
     <title>Crédits</title>
 </head>
 <body>
