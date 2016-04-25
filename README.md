@@ -47,9 +47,8 @@ carte cliquable en map + listes des 5 dernières recettes en aléatoire
 - déconnexion
 
 [FOOTER] => MIKE
-- plan du site
-- crédit (une page qui parle de nous qu'on a fait le site)
-- contact (pour nous contacter en cas de bugs)
+- crédit (une page qui parle de nous qu'on a fait le site) => EMILY
+- contact (pour nous contacter en cas de bugs) => EMILY
 
 
 +++ PAGE CONNEXION +++ => MIKE
