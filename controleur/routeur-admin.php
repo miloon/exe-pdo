@@ -23,7 +23,7 @@ elseif(isset($_GET['sup'])&& ctype_digit($_GET['sup'])){
 }
 elseif(isset($_GET['modif'])&& ctype_digit($_GET['modif'])){
     $idrecette = (int) $_GET['modif'];
-    /*require_once "modele/edition.php";*/
+    require_once "modele/edition.php";
     require_once "vue/edition.php";
 
 }
