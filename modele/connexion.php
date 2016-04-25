@@ -9,7 +9,7 @@ if(!empty($_POST)) {
 
 // requête préparée
     $recup = $connexion->prepare("SELECT u.id,u.login,u.mdp,u.droit_id,u.ladesc,
-                                        d.id as iddroit,d.lintitule,d.ecrit,d.modif,d.supp
+                                        d.id as iddroit,d.lintitule,d.ecrit,d.modif,d.sup
                                     FROM   util u
                                     INNER JOIN droit d
                                     ON u.droit_id = d.id
