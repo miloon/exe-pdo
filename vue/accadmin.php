@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <!-- Ajout du .js pour le toggle -->
     <script type="text/javascript" src='https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js'></script>
-    <title><?=$titre?></title>
+    <title>Adminstration</title>
 </head>
 <body>
 <?php
