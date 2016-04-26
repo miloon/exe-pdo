@@ -5,7 +5,7 @@
 if(empty($_POST['edition'])) {
     // création d'une variable pour afficher le formulaire
     $affiche_modif = true;
-    $succes_modif = false;
+    $affiche_success = false;
     $requete = $connexion->prepare("SELECT r.id AS idrecette, r.titre, r.ladesc, r.ladate, p.id AS idpays, p.lintitule AS lepays
                 FROM recette r
                   INNER JOIN pays p
@@ -49,7 +49,8 @@ if(empty($_POST['edition'])) {
         $prepare->bindValue(":idpays",$idpays,PDO::PARAM_INT);
         $prepare->execute();
         $connexion->commit();
-       
+        $affiche_success = true;
+
     }catch (Exception $e){
         $connexion->rollBack();
         echo "Erreur : " . $e->getMessage();
