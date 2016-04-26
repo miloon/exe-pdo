@@ -8,7 +8,7 @@
     <!-- Ajout du .js pour le toggle -->
     <script type="text/javascript" src='https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js'></script>
     <!-- Script pour la suppression d'un article -->
-    <script src="vues/js/monjs.js"></script>
+    <script src="vue/js/monjs.js"></script>
 </head>
 <body>
 <?php
@@ -17,10 +17,21 @@ require_once "vue/menu.php";
 <section>
 
 <h2>Panneau d'administration de votre site</h2>
-    <table><tr><td>Titre</td><td>Date</td><td>Pays</td><td>Continent</td><td>Auteur</td><td></td></tr>
+    <table><tr><td>Titre</td><td>Date</td><td>Pays</td><td>Continent</td><td>Auteur</td><td></td><td></td></tr>
 <?php
         while ($res = $requete->fetch(PDO::FETCH_ASSOC)){
-        echo "<tr><td><a href='?modif=".$res['id']."'>".$res['titre']."</a></td><td>".$res['jour']."/".$res['mois']."/".$res['annee']." - ".$res['heure'].":".$res['minute']."</td><td>".$res['pays']."</td><td>".$res['continent']."</td><td>".$res['login']."</td><td><img alt='supprimer' onclick='confirmDelete(".$res['titre'].",".$res['id'].")' style='".$displaysup."' src='vue/img/delete.gif'/></td></tr>";
+        ?>
+        <tr><td><a href='?modif=<?=$res['id']?>'><?=$res['titre']?></a></td>
+            <td><?=$res['jour']?>/<?=$res['mois']?>/<?=$res['annee']?> - <?=$res['heure']?>:<?=$res['minute']?></td>
+            <td><?=$res['pays']?></td>
+            <td><?=$res['continent']?></td>
+            <td><?=$res['login']?></td>
+            <td><a href='?modif=<?=$res['id']?>'><img src='vue/img/editer.gif' alt='edition'/></a></td>
+            <td><img alt='supprimer'
+                onclick='confirmDelete("<?=$res['titre']?>",<?=$res['id']?>)'
+                style='<?=$displaysup?>'
+                src='vue/img/delete.gif'/></td></tr>
+        <?php
         }
 ?>
     </table>
