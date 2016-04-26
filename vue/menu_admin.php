@@ -85,23 +85,29 @@ $recupamerique= $amerique->fetchAll(PDO::FETCH_OBJ);
 
 
         <div class='toggle'>
-            <div class='more'><p><?=
+            <div class='more'><p><?php
 
 
-                    $recupoceanie->lintitule
+                    foreach ($recuptous as $rec) { ?>
+
+
+                <p><?= $rec->lintitule ?></p>
+
+                <hr/>
+
+                <?php }
+                ?>
 
 
 
                     ?></p></div>
             <div class="less">
-                <a class="button-read-more button-read" href="#read">Cliquez pour en savoir plus !</a>
+                <a class="button-read-more button-read" href="#read">Océanie</a>
                 <a class="button-read-less button-read" href="#read">Replier</a>
             </div>
         </div>
 
-
-
-        <li><a href="./">Océanie</a></li>
+        
 
 
 
