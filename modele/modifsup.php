@@ -1,7 +1,6 @@
 <?php
 $titre = "Earth's food - Administration";
-if (($_SESSION['ecrit']) || ($_SESSION['modifie'])){
-} else {
+if (empty($_SESSION['supprime']) && empty($_SESSION['modifie'])){
     header("Location: ./");
 }
 // à vérifier si le truc de non-affichage fonctionne quand on aura les sessions comme il faut
