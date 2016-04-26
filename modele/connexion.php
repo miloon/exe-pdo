@@ -10,23 +10,27 @@ if(!empty($_POST)) {
 // requête préparée
     $recup = $connexion->prepare("SELECT u.id,u.login,u.mdp,u.droit_id,u.ladesc,
                                         d.id as iddroit,d.lintitule,d.ecrit,d.modif,d.sup
+<<<<<<< HEAD
                                     FROM   util u
+=======
+                                    FROM util u
+>>>>>>> 1256d9b31d06942fea4e4dfffc110605ca979726
                                     INNER JOIN droit d
                                     ON u.droit_id = d.id
-                                    WHERE u.login <= :login AND u.mdp <= :pass");
+                                    WHERE u.login = :login AND u.mdp = :pass");
 
 // attribution de valeurs
-    $recup->bindValue(':login',$lelogin, PDO::PARAM_INT);
+    $recup->bindValue(':login',$lelogin, PDO::PARAM_STR);
     $recup->bindValue(':pass',$lepass, PDO::PARAM_STR);
 
 // exécuter la requête
     $recup->execute();
 
-    $util = $recup->fetch(PDO::FETCH_OBJ);
+    $util = $recup->fetch(PDO::FETCH_ASSOC);
 
 
     // on a un résultat
-    if(!is_null($util)){
+    if($recup->rowCount()==1){
 
         // création de session valide
         $_SESSION['idutil'] = session_id();
