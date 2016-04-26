@@ -4,15 +4,11 @@
     <link rel="icon" type="image/png" href="vue/img/favicon.ico"/>
     <link href="stylesheet.css" rel="stylesheet" type="text/css"/>
     <meta charset="UTF-8">
-<<<<<<< HEAD
     <title>Earth's food - Administration</title>
     <!-- Ajout du .js pour le toggle -->
     <script type="text/javascript" src='https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js'></script>
-=======
-    <!-- Ajout du .js pour le toggle -->
-    <script type="text/javascript" src='https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js'></script>
     <title><?=$titre?></title>
->>>>>>> ca2a9b2a76e4a7cf472d0fd475c1bec1cee15514
+
 </head>
 <body>
 <?php
@@ -33,34 +29,26 @@ require_once "vue/menu_admin.php";
         ?>
     </article>
 </section>
-<<<<<<< HEAD
-=======
-
->>>>>>> ca2a9b2a76e4a7cf472d0fd475c1bec1cee15514
 <script>/* <![CDATA[ */
     /*
      |-----------------------------------------------------------------------
      |  jQuery Multiple Toggle Script by Matt - www.skyminds.net
      |-----------------------------------------------------------------------
      |
-     | Affiche et cache le contenu de blocs multiples.
+     | Affiche et cache le contenu de blocs multiples. Bloc après le texte.
      |
      */
-    jQuery(document).ready(function () {
+    jQuery(document).ready(function() {
         $(".more").hide();
         jQuery('.button-read-more').click(function () {
             $(this).closest('.less').addClass('active');
-            $(this).closest(".less").prev().stop(true).slideDown("1000");
+            $(this).closest(".less").next().stop(true).slideDown("1000");
         });
         jQuery('.button-read-less').click(function () {
             $(this).closest('.less').removeClass('active');
-            $(this).closest(".less").prev().stop(true).slideUp("1000");
+            $(this).closest(".less").next().stop(true).slideUp("1000");
         });
     });
     /* ]]> */ </script>
-<<<<<<< HEAD
-=======
-
->>>>>>> ca2a9b2a76e4a7cf472d0fd475c1bec1cee15514
 </body>
 </html>
