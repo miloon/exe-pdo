@@ -21,7 +21,7 @@ require_once "vue/menu.php";
 <?php
         while ($res = $requete->fetch(PDO::FETCH_ASSOC)){
         ?>
-        <tr><td><a href='?idrecette=<?=$res['id']?>'><?=$res['titre']?></a></td>
+        <tr><td><a href='?modif=<?=$res['id']?>'><?=$res['titre']?></a></td>
             <td><?=$res['jour']?>/<?=$res['mois']?>/<?=$res['annee']?> - <?=$res['heure']?>:<?=$res['minute']?></td>
             <td><?=$res['pays']?></td>
             <td><?=$res['continent']?></td>
