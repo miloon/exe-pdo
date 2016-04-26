@@ -4,13 +4,19 @@
     <link rel="icon" type="image/png" href="vue/img/favicon.ico"/>
     <link href="stylesheet.css" rel="stylesheet" type="text/css"/>
     <meta charset="UTF-8">
+<<<<<<< HEAD
     <title>Earth's food - Administration</title>
     <!-- Ajout du .js pour le toggle -->
     <script type="text/javascript" src='https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js'></script>
+=======
+    <!-- Ajout du .js pour le toggle -->
+    <script type="text/javascript" src='https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js'></script>
+    <title><?=$titre?></title>
+>>>>>>> ca2a9b2a76e4a7cf472d0fd475c1bec1cee15514
 </head>
 <body>
 <?php
-require_once "vue/menu.php";
+require_once "vue/menu_admin.php";
 ?>
 <section>
     <article>
@@ -27,6 +33,10 @@ require_once "vue/menu.php";
         ?>
     </article>
 </section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> ca2a9b2a76e4a7cf472d0fd475c1bec1cee15514
 <script>/* <![CDATA[ */
     /*
      |-----------------------------------------------------------------------
@@ -48,5 +58,9 @@ require_once "vue/menu.php";
         });
     });
     /* ]]> */ </script>
+<<<<<<< HEAD
+=======
+
+>>>>>>> ca2a9b2a76e4a7cf472d0fd475c1bec1cee15514
 </body>
 </html>

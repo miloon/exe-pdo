@@ -1,12 +1,12 @@
 <?php
 
-$oceanie = $connexion->prepare("SELECT * from pays
+$oceanie = $connexion->query("SELECT * from pays
                                      WHERE pays.continent_id = 1
 
 
 
                              ");
-$oceanie->bindValue(':lid',$pays, PDO::PARAM_INT);
+
 
 $oceanie->execute();
 
@@ -15,13 +15,13 @@ $recupoceanie= $oceanie->fetchAll(PDO::FETCH_OBJ);
 
 
 /***************************europ******************/
-$europe = $connexion->prepare("SELECT * from pays
-                                     WHERE pays.continent_id = 2
+$europe = $connexion->query("SELECT * from pays
+                                     WHERE pays.continent_id = 3
 
 
 
                              ");
-$europe->bindValue(':lid',$pays, PDO::PARAM_INT);
+
 
 $europe->execute();
 
@@ -30,13 +30,13 @@ $recupeurope= $europe->fetchAll(PDO::FETCH_OBJ);
 
 /**************************asie***************************/
 
-$asie = $connexion->prepare("SELECT * from pays
-                                     WHERE pays.continent_id = 3
+$asie = $connexion->query("SELECT * from pays
+                                     WHERE pays.continent_id = 2
 
 
 
                              ");
-$asie->bindValue(':lid',$pays, PDO::PARAM_INT);
+
 
 $asie->execute();
 
@@ -45,13 +45,13 @@ $recupasie= $asie->fetchAll(PDO::FETCH_OBJ);
 
 /***************************afrique************************/
 
-$afrique = $connexion->prepare("SELECT * from pays
+$afrique = $connexion->query("SELECT * from pays
                                      WHERE pays.continent_id = 4
 
 
 
                              ");
-$afrique->bindValue(':lid',$pays, PDO::PARAM_INT);
+
 
 $afrique->execute();
 
@@ -61,13 +61,13 @@ $recupafrique= $afrique->fetchAll(PDO::FETCH_OBJ);
 
 /******************************amerique****************************/
 
-$amerique = $connexion->prepare("SELECT * from pays
+$amerique = $connexion->query("SELECT * from pays
                                      WHERE pays.continent_id = 5
 
 
 
                              ");
-$amerique->bindValue(':lid',$pays, PDO::PARAM_INT);
+
 
 $amerique->execute();
 
@@ -82,37 +82,135 @@ $recupamerique= $amerique->fetchAll(PDO::FETCH_OBJ);
     <ul>
         <li><a href="./">Accueil Admin</a></li>
 
-
+        <!------------------------Oceanie--------------------------------->
 
         <div class='toggle'>
-            <div class='more'><p><?=
+            <div class='more'>
+                <ul>
+                    <?php
 
 
-                    $recupoceanie->lintitule
+                    foreach ($recupoceanie as $rec) { ?>
 
 
+                <li><a href="?modif=<?=$rec->id?>"> <?= $rec->lintitule ?></a></li>
 
-                    ?></p></div>
+
+                <?php }
+                ?>
+
+                </ul>
+
+                    </div>
             <div class="less">
-                <a class="button-read-more button-read" href="#read">Cliquez pour en savoir plus !</a>
-                <a class="button-read-less button-read" href="#read">Replier</a>
+                <a class="button-read-more button-read" href="#read">Océanie</a>
+                <a class="button-read-less button-read" href="#read">Océanie</a>
+            </div>
+        </div>
+        <!------------------------Europe--------------------------------->
+
+        <div class='toggle'>
+            <div class='more'>
+                <ul>
+                    <?php
+
+
+                    foreach ($recupeurope as $rec) { ?>
+
+
+                        <li><a href="?modif=<?=$rec->id?>"> <?= $rec->lintitule ?></a></li>
+
+
+                    <?php }
+                    ?>
+
+                </ul>
+
+            </div>
+            <div class="less">
+                <a class="button-read-more button-read" href="#read">Europe</a>
+                <a class="button-read-less button-read" href="#read">Europe</a>
             </div>
         </div>
 
 
 
-        <li><a href="./">Océanie</a></li>
+        <!------------------------Asie--------------------------------->
 
 
+        <div class='toggle'>
+            <div class='more'>
+                <ul>
+                    <?php
 
-        <li><a href="./">Afrique</a></li>
+
+                    foreach ($recupasie as $rec) { ?>
 
 
-        <li><a href="./">Amérique</a></li>
+                        <li><a href="?modif=<?=$rec->id?>"> <?= $rec->lintitule ?></a></li>
 
 
-        <li><a href="./">Asie</a></li>
+                    <?php }
+                    ?>
 
+                </ul>
+
+            </div>
+            <div class="less">
+                <a class="button-read-more button-read" href="#read">Asie</a>
+                <a class="button-read-less button-read" href="#read">Asie</a>
+            </div>
+        </div>
+
+        <!------------------------Afrique--------------------------------->
+        <div class='toggle'>
+            <div class='more'>
+                <ul>
+                    <?php
+
+
+                    foreach ($recupafrique as $rec) { ?>
+
+
+                        <li><a href="?modif=<?=$rec->id?>"> <?= $rec->lintitule ?></a></li>
+
+
+                    <?php }
+                    ?>
+
+                </ul>
+
+            </div>
+            <div class="less">
+                <a class="button-read-more button-read" href="#read">Afrique</a>
+                <a class="button-read-less button-read" href="#read">Afrique</a>
+            </div>
+        </div>
+
+<!------------------------Amerique--------------------------------->
+        <div class='toggle'>
+            <div class='more'>
+                <ul>
+                    <?php
+
+
+                    foreach ($recupamerique as $rec) { ?>
+
+
+                        <li><a href="?modif=<?=$rec->id?>"> <?= $rec->lintitule ?></a></li>
+
+
+                    <?php }
+                    ?>
+
+                </ul>
+
+            </div>
+            <div class="less">
+                <a class="button-read-more button-read" href="#read">Amerique</a>
+                <a class="button-read-less button-read" href="#read">Amerique</a>
+            </div>
+        </div>
 
 
         <li><a href="?deconnect">Déconnexion</a></li>
