@@ -31,6 +31,8 @@ require_once "vue/menu.php";
 ?>
         </ul>
 </section>
-
+<?php
+include"vue/footer.php";
+?>
 </body>
 </html>

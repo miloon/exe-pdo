@@ -19,6 +19,8 @@
         <p><?=$affiche_recette['ladesc']?></p>
     </article>
 </section>
-
+<?php
+include"vue/footer.php";
+?>
 </body>
 </html>

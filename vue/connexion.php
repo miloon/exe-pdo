@@ -19,5 +19,9 @@
   <?php
   if(isset($erreur)) echo "<h3>$erreur</h3>";
   ?>
+
+  <?php
+  include"vue/footer.php";
+  ?>
 </body>
 </html>

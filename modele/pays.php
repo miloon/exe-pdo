@@ -26,10 +26,13 @@ $recup->bindValue(':lid',$pays, PDO::PARAM_INT);
 // exécuter la requête
 $recup->execute();
 
+
+
+
 $recuptous= $recup->fetchAll(PDO::FETCH_OBJ);
 
 
-/*----------------deuxieme requete-------------------------*/
+/*----------------deuxieme requete   $cont = pays-------------------------*/
 
 $cont = $connexion->prepare("SELECT * from pays
                                      WHERE id = :lid
@@ -43,6 +46,10 @@ $cont->execute();
 
 
 $continant= $cont->fetch(PDO::FETCH_OBJ);
+
+
+$titre = $continant->lintitule;
+
 
 
 

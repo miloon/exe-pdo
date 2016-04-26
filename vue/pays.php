@@ -4,7 +4,7 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>titre</title>
+    <title><?=$titre?></title>
     <link rel="icon" type="image/png" href="vue/img/favicon.ico"/>
     <link href="stylesheet.css" rel="stylesheet" type="text/css"/>
     <!-- Ajout du .js pour le toggle -->
@@ -40,6 +40,9 @@
 
     </article>
 </section>
+<?php
+include"vue/footer.php";
+?>
 <script>/* <![CDATA[ */
     /*
      |-----------------------------------------------------------------------

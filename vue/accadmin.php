@@ -7,12 +7,9 @@
     <title>Earth's food - Administration</title>
     <!-- Ajout du .js pour le toggle -->
     <script type="text/javascript" src='https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js'></script>
-<<<<<<< HEAD
-    <title>Adminstration</title>
-=======
-    <title><?=$titre?></title>
 
->>>>>>> 615e582c66bd0fe639d058621135bda281fa900e
+    <title>Administation</title>
+
 </head>
 <body>
 <?php

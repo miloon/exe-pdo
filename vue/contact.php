@@ -32,7 +32,9 @@
         </p>
     </article>
 </section>
-
+<?php
+include"vue/footer.php";
+?>
 </body>
 </html>
 

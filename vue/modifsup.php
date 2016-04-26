@@ -4,7 +4,7 @@
     <link rel="icon" type="image/png" href="vue/img/favicon.ico"/>
     <link href="stylesheet.css" rel="stylesheet" type="text/css"/>
     <meta charset="UTF-8">
-    <title><?=$titre?></title>
+    <title>Panneau d'administration</title>
     <!-- Ajout du .js pour le toggle -->
     <script type="text/javascript" src='https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js'></script>
     <!-- Script pour la suppression d'un article -->
@@ -12,7 +12,7 @@
 </head>
 <body>
 <?php
-require_once "vue/menu.php";
+require_once "vue/menu_admin.php";
 ?>
 <section>
 
