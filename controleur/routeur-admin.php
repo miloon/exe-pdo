@@ -1,18 +1,23 @@
 <?php
 // accueil de l'admin
 if(empty($_GET)){
-    require_once "modele/modifsup.php";
-    require_once "vue/modifsup.php";
+    require_once "modele/accadmin.php";
+    require_once "vue/accadmin.php";
 
 // déconnexion
 }elseif(isset($_GET['deconnect'])){
     require_once "modele/deco.php";
 }
 
+elseif(isset($_GET['modifsup'])) {
+    require_once "modele/modifsup.php";
+    require_once "vue/modifsup.php";
+}
+
 // nouvel article
-elseif(isset($_GET['new'])){
-    require_once "modele/new.php";
-    require_once "vue/new.php";
+elseif(isset($_GET['insert'])){
+    require_once "modele/insert.php";
+    require_once "vue/insert.php";
 }
 
 // suppression de l'article
