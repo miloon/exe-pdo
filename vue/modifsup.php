@@ -5,6 +5,9 @@
     <link href="stylesheet.css" rel="stylesheet" type="text/css"/>
     <meta charset="UTF-8">
     <title><?=$titre?></title>
+    <!-- Ajout du .js pour le toggle -->
+    <script type="text/javascript" src='https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js'></script>
+    <!-- Script pour la suppression d'un article -->
     <script src="vues/js/monjs.js"></script>
 </head>
 <body>
@@ -22,6 +25,26 @@ require_once "vue/menu.php";
 ?>
     </table>
 </section>
-
+<script>/* <![CDATA[ */
+    /*
+     |-----------------------------------------------------------------------
+     |  jQuery Multiple Toggle Script by Matt - www.skyminds.net
+     |-----------------------------------------------------------------------
+     |
+     | Affiche et cache le contenu de blocs multiples. Bloc après le texte.
+     |
+     */
+    jQuery(document).ready(function() {
+        $(".more").hide();
+        jQuery('.button-read-more').click(function () {
+            $(this).closest('.less').addClass('active');
+            $(this).closest(".less").next().stop(true).slideDown("1000");
+        });
+        jQuery('.button-read-less').click(function () {
+            $(this).closest('.less').removeClass('active');
+            $(this).closest(".less").next().stop(true).slideUp("1000");
+        });
+    });
+    /* ]]> */ </script>
 </body>
 </html>
