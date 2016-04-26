@@ -107,7 +107,7 @@ $recupamerique= $amerique->fetchAll(PDO::FETCH_OBJ);
             </div>
         </div>
 
-        
+
 
 
 

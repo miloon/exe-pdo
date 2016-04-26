@@ -1,7 +1,6 @@
 <?php
 // accueil de l'admin
 if(empty($_GET)){
-    require_once "modele/accadmin.php";
     require_once "vue/accadmin.php";
 
 // déconnexion
