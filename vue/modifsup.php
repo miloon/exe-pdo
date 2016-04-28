@@ -29,16 +29,15 @@
 
         <h2>Panneau d'administration de votre site</h2>
         <table class="table">
-            <thead><tr>
-                <th>Titre</th>
-                <th>Date</th>
-                <th>Pays</th>
-                <th>Continent</th>
-                <th>Auteur</th>
+            <tr>
+                <th><a href="?modifsup=arttitre">Titre</a></th>
+                <th><a href="?modifsup=artdate">Date</a></th>
+                <th><a href="?modifsup=artpays">Pays</a></th>
+                <th><a href="?modifsup=artcontinent">Continent</a></th>
+                <th><a href="?modifsup=artauteur">Auteur</a></th>
                 <th></th>
                 <th></th>
-            </tr></thead>
-            <tbody>
+            </tr>
             <?php
             while ($res = $requete->fetch(PDO::FETCH_ASSOC)) {
                 ?>
@@ -56,7 +55,7 @@
                 </tr>
                 <?php
             }
-            ?></tbody>
+            ?>
         </table>
     </section>
     <script>/* <![CDATA[ */

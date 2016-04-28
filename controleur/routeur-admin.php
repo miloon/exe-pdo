@@ -11,6 +11,7 @@ if(empty($_GET)){
 elseif(isset($_GET['modifsup'])) {
     require_once "modele/modifsup.php";
     require_once "vue/modifsup.php";
+
 }
 
 // nouvel article
@@ -40,5 +41,7 @@ elseif(isset($_GET['modif'])&& ctype_digit($_GET['modif'])){
     $idrecette = (int) $_GET['modif'];
     require_once "modele/edition.php";
     require_once "vue/edition.php";
+// tentative de faire le modifsup rangeable par clic
+}elseif(isset($_GET['insert'])){
 
 }
