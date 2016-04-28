@@ -1,17 +1,21 @@
 <?php
 
-$cont=$connexion->prepare("SELECT * FROM continent");
+$cont = $connexion->prepare("SELECT * FROM continent");
 $cont->execute();
 
 ?>
-<ul>
-    <li><a href="./">Accueil</a></li>
-    <?php
-    while ($continent = $cont->fetch(PDO::FETCH_ASSOC)){
-        echo "<li><a href='?idcontinent=".$continent['id']."'>".$continent['lintitule']."</a></li>";
-    }
-    ?>
+<header class="row page-header"></header>
+<nav class="row">
+    <ul class="col-md-12 list-inline">
+        <li><a class="btn btn-default" href="./">Accueil</a></li>
+        <?php
+        while ($continent = $cont->fetch(PDO::FETCH_ASSOC)) {
+            echo "<li><a class=\"btn btn-default\" href='?idcontinent=" . $continent['id'] . "'>" . $continent['lintitule'] . "</a></li>";
+        }
+        ?>
 
-    <li><a href="?connect">connexion</a></li>
-</ul>
+        <li><a class="btn btn-default" href="?connect">connexion</a></li>
+    </ul>
+</nav>
+
 

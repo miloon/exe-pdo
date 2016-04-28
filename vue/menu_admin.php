@@ -4,14 +4,14 @@ $oceanie = $connexion->query("SELECT * from pays
                                      WHERE pays.continent_id = 1
                              ");
 $oceanie->execute();
-$recupoceanie= $oceanie->fetchAll(PDO::FETCH_OBJ);
+$recupoceanie = $oceanie->fetchAll(PDO::FETCH_OBJ);
 
 /***************************Europe******************/
 $europe = $connexion->query("SELECT * from pays
                                      WHERE pays.continent_id = 3
                              ");
 $europe->execute();
-$recupeurope= $europe->fetchAll(PDO::FETCH_OBJ);
+$recupeurope = $europe->fetchAll(PDO::FETCH_OBJ);
 
 /**************************Asie***************************/
 
@@ -19,7 +19,7 @@ $asie = $connexion->query("SELECT * from pays
                                      WHERE pays.continent_id = 2
                              ");
 $asie->execute();
-$recupasie= $asie->fetchAll(PDO::FETCH_OBJ);
+$recupasie = $asie->fetchAll(PDO::FETCH_OBJ);
 
 /***************************Afrique************************/
 
@@ -27,7 +27,7 @@ $afrique = $connexion->query("SELECT * from pays
                                      WHERE pays.continent_id = 4
                              ");
 $afrique->execute();
-$recupafrique= $afrique->fetchAll(PDO::FETCH_OBJ);
+$recupafrique = $afrique->fetchAll(PDO::FETCH_OBJ);
 
 /******************************Amérique****************************/
 
@@ -35,7 +35,7 @@ $amerique = $connexion->query("SELECT * from pays
                                      WHERE pays.continent_id = 5
                              ");
 $amerique->execute();
-$recupamerique= $amerique->fetchAll(PDO::FETCH_OBJ);
+$recupamerique = $amerique->fetchAll(PDO::FETCH_OBJ);
 
 /*********************************************************/
 
@@ -44,7 +44,7 @@ $recupamerique= $amerique->fetchAll(PDO::FETCH_OBJ);
     <ul>
         <li><a href="./">Administation</a></li>
 
-<!------------------------Oceanie--------------------------------->
+        <!------------------------Oceanie--------------------------------->
 
         <div class='toggle'>
             <div class="less">
@@ -55,13 +55,13 @@ $recupamerique= $amerique->fetchAll(PDO::FETCH_OBJ);
                 <ul>
                     <?php
                     foreach ($recupoceanie as $rec) { ?>
-                <li><a href="?idpays=<?=$rec->id?>"> <?= $rec->lintitule ?></a></li>
-                <?php }
-                ?>
+                        <li><a href="?idpays=<?= $rec->id ?>"> <?= $rec->lintitule ?></a></li>
+                    <?php }
+                    ?>
                 </ul>
-                    </div>
+            </div>
         </div>
-<!------------------------Europe--------------------------------->
+        <!------------------------Europe--------------------------------->
 
         <div class='toggle'>
             <div class="less">
@@ -72,14 +72,14 @@ $recupamerique= $amerique->fetchAll(PDO::FETCH_OBJ);
                 <ul>
                     <?php
                     foreach ($recupeurope as $rec) { ?>
-                        <li><a href="?idpays=<?=$rec->id?>"> <?= $rec->lintitule ?></a></li>
+                        <li><a href="?idpays=<?= $rec->id ?>"> <?= $rec->lintitule ?></a></li>
                     <?php }
                     ?>
                 </ul>
             </div>
         </div>
 
-<!------------------------Asie--------------------------------->
+        <!------------------------Asie--------------------------------->
         <div class='toggle'>
             <div class="less">
                 <a class="button-read-more button-read" href="#read">Asie</a>
@@ -89,14 +89,14 @@ $recupamerique= $amerique->fetchAll(PDO::FETCH_OBJ);
                 <ul>
                     <?php
                     foreach ($recupasie as $rec) { ?>
-                        <li><a href="?idpays=<?=$rec->id?>"> <?= $rec->lintitule ?></a></li>
+                        <li><a href="?idpays=<?= $rec->id ?>"> <?= $rec->lintitule ?></a></li>
                     <?php }
                     ?>
                 </ul>
             </div>
         </div>
 
-<!------------------------Afrique--------------------------------->
+        <!------------------------Afrique--------------------------------->
         <div class='toggle'>
             <div class="less">
                 <a class="button-read-more button-read" href="#read">Afrique</a>
@@ -106,7 +106,7 @@ $recupamerique= $amerique->fetchAll(PDO::FETCH_OBJ);
                 <ul>
                     <?php
                     foreach ($recupafrique as $rec) { ?>
-                        <li><a href="?idpays=<?=$rec->id?>"> <?= $rec->lintitule ?></a></li>
+                        <li><a href="?idpays=<?= $rec->id ?>"> <?= $rec->lintitule ?></a></li>
                     <?php }
                     ?>
                 </ul>
@@ -114,7 +114,7 @@ $recupamerique= $amerique->fetchAll(PDO::FETCH_OBJ);
             </div>
         </div>
 
-<!------------------------Amérique--------------------------------->
+        <!------------------------Amérique--------------------------------->
         <div class='toggle'>
             <div class="less">
                 <a class="button-read-more button-read" href="#read">Amerique</a>
@@ -124,7 +124,7 @@ $recupamerique= $amerique->fetchAll(PDO::FETCH_OBJ);
                 <ul>
                     <?php
                     foreach ($recupamerique as $rec) { ?>
-                        <li><a href="?idpays=<?=$rec->id?>"> <?= $rec->lintitule ?></a></li>
+                        <li><a href="?idpays=<?= $rec->id ?>"> <?= $rec->lintitule ?></a></li>
                     <?php }
                     ?>
                 </ul>

@@ -25,8 +25,6 @@ elseif(isset($_GET['sup'])&& ctype_digit($_GET['sup'])){
     $sup = (int) $_GET['sup'];
     require_once "modele/sup.php";
 
-
-
 } elseif (isset($_GET['idrecette']) && ctype_digit($_GET['idrecette'])) {
     $recette = (int)$_GET['idrecette'];
     require_once "modele/recette.php";
