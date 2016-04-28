@@ -52,7 +52,7 @@
     }
 
         if($affiche_success){?>
-            <h2>essai affichage insertion réussie</h2>
+            <h2>Félicitations ! L'article a bien été modifié !</h2>
             <p>Good job <?=$_SESSION['login']?>!</p>
         <?php
     }?>

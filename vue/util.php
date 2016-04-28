@@ -7,14 +7,14 @@
     <title><?=$titre?></title>
 </head>
 <body>
-<?php require_once "view/menu.php"; ?>
+<?php require_once "vue/menu.php"; ?>
 <section>
     <article>
-        <h1><?=$requete['login']?></h1>
-        <p><?=$requete['ladesc']?></p>
+        <h1><?=$affiche_util['login']?></h1>
+        <p><?=$affiche_util['ladesc']?></p>
     </article>
     <article>
-        <h3><Les articles écrits par <?=$requete['login']?></h3>
+        <h3><Les articles écrits par <?=$affiche_util['login']?></h3>
         <?php
         while ($res = $requete->fetch(PDO::FETCH_ASSOC)){
             echo "<li><a href='?idrecette=".$res['idrecette']."'>".$res['recette']."</a></li>";
