@@ -15,7 +15,8 @@
 require_once "vue/menu_admin.php";
 ?>
 <section>
-
+  <?php
+  if($requete->rowCount()==1){ ?>
   <h2>Panneau d'administration de votre site</h2>
   <table><tr><td>Titre</td><td>Date</td><td>Pays</td><td>Continent</td><td>Auteur</td><td></td><td></td></tr>
     <?php
@@ -32,6 +33,10 @@ require_once "vue/menu_admin.php";
                  style='<?=$displaysup?>'
                  src='vue/img/delete.gif'/></td></tr>
       <?php
+    }
+  }else{?>
+      <h2>Il n'y a aucun article à administrer pour cette catégorie.</h2>
+    <?php
     }
     ?>
   </table>

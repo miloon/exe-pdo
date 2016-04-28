@@ -14,7 +14,7 @@ if(is_null($requete)){
     // on arrête le script
     exit();
 }
-
-$titre = $requete['login'];
+$affiche_util = $requete->fetch(PDO::FETCH_ASSOC);
+$titre = $affiche_util['login'];
 
 ?>
