@@ -55,7 +55,7 @@ $recupamerique= $amerique->fetchAll(PDO::FETCH_OBJ);
                 <ul>
                     <?php
                     foreach ($recupoceanie as $rec) { ?>
-                <li><a href="?modif=<?=$rec->id?>"> <?= $rec->lintitule ?></a></li>
+                <li><a href="?idpays=<?=$rec->id?>"> <?= $rec->lintitule ?></a></li>
                 <?php }
                 ?>
                 </ul>
@@ -72,7 +72,7 @@ $recupamerique= $amerique->fetchAll(PDO::FETCH_OBJ);
                 <ul>
                     <?php
                     foreach ($recupeurope as $rec) { ?>
-                        <li><a href="?modif=<?=$rec->id?>"> <?= $rec->lintitule ?></a></li>
+                        <li><a href="?idpays=<?=$rec->id?>"> <?= $rec->lintitule ?></a></li>
                     <?php }
                     ?>
                 </ul>
@@ -89,7 +89,7 @@ $recupamerique= $amerique->fetchAll(PDO::FETCH_OBJ);
                 <ul>
                     <?php
                     foreach ($recupasie as $rec) { ?>
-                        <li><a href="?modif=<?=$rec->id?>"> <?= $rec->lintitule ?></a></li>
+                        <li><a href="?idpays=<?=$rec->id?>"> <?= $rec->lintitule ?></a></li>
                     <?php }
                     ?>
                 </ul>
@@ -106,7 +106,7 @@ $recupamerique= $amerique->fetchAll(PDO::FETCH_OBJ);
                 <ul>
                     <?php
                     foreach ($recupafrique as $rec) { ?>
-                        <li><a href="?modif=<?=$rec->id?>"> <?= $rec->lintitule ?></a></li>
+                        <li><a href="?idpays=<?=$rec->id?>"> <?= $rec->lintitule ?></a></li>
                     <?php }
                     ?>
                 </ul>
@@ -124,7 +124,7 @@ $recupamerique= $amerique->fetchAll(PDO::FETCH_OBJ);
                 <ul>
                     <?php
                     foreach ($recupamerique as $rec) { ?>
-                        <li><a href="?modif=<?=$rec->id?>"> <?= $rec->lintitule ?></a></li>
+                        <li><a href="?idpays=<?=$rec->id?>"> <?= $rec->lintitule ?></a></li>
                     <?php }
                     ?>
                 </ul>
