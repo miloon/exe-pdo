@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -13,32 +12,34 @@
 <body>
 <?php require_once "vue/menu.php"; ?>
 <section>
+    <!--Ajout d'un tableau pour permettre de prendre le premier objet -->
+    <article>
+        <h1><?= $recuptous[0]->clintitule ?></h1>
+    </article>
+
     <article>
 
         <?php
         foreach ($recuptous as $rec) { ?>
-        <h1><?= $rec->plintitule ?></h1>
-        <p><a><?= $rec->img ?></p></a>
+            <h1><?= $rec->plintitule ?> | <?= $rec->nb ?></h1>
+            <p><a><?= $rec->img ?></p></a>
+        <?php
+            $titre = explode('|||',$rec->titre);
+            $desc = explode('|||',$rec->ladescrecette);
+            $id = explode(',',$rec->idrecette);
+            foreach($id as $clef => $val){
+                echo "<h3>".$titre[$clef]."</h3>";
+                echo "<p>".$desc[$clef]." ... </p>";
+                echo "<a href='?idrecette=$val'>Lire la suite</a>";
+            }
+
+        ?>
 
         <?php }
         ?>
     </article>
-    <article>
-        <h1><?= $rec->clintitule ?></h1>
-    </article>
 
-    <article>
-        <h2>Nos 3 dernières recettes</h2>
-        <p><?= $nb->idrecette ?></p>
-        <?php
-        foreach ($recuptous as $rec) { ?>
-        <p><?= $rec->titre ?></p>
-        <p><?= nl2br($rec->ladesc) ?>... <a href='?idrecette=<?= $rec->idrecette ?>'>Lire la suite</a>
-            <?php }
-            ?>
-    <article>
 
-    </article>
 
 </section>
 
