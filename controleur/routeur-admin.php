@@ -19,6 +19,7 @@ elseif(isset($_GET['insert'])){
     require_once "vue/insert.php";
 }
 
+
 // suppression de l'article
 elseif(isset($_GET['sup'])&& ctype_digit($_GET['sup'])){
     $sup = (int) $_GET['sup'];
@@ -31,6 +32,10 @@ elseif(isset($_GET['sup'])&& ctype_digit($_GET['sup'])){
     require_once "modele/recette.php";
     require_once "vue/recette.php";
 
+} elseif (isset($_GET['idpays']) && ctype_digit($_GET['idpays'])) {
+    $pays = (int)$_GET['idpays'];
+    require_once "modele/recetteadmin.php";
+    require_once "vue/recetteadmin.php";
 }
 
 elseif(isset($_GET['modif'])&& ctype_digit($_GET['modif'])){
