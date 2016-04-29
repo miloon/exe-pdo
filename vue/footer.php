@@ -1,9 +1,10 @@
 <footer class="row">
-    <ul>
-        <li><a href="?contact">Contact</a></li>
-        <li><a href="?credit">Crédit</a></li>
-    </ul>
-
+    <div class="pull-right">
+        <ul class="list-inline">
+            <li><a href="?contact">Contact</a></li>
+            <li><a href="?credit">Crédit</a></li>
+        </ul>
+</div>
 </footer>
 </div>
 <!-- jQuery (nécessaire pour les plugins JavaScript de Bootstrap) -->
