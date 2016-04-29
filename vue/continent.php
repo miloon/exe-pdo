@@ -22,32 +22,39 @@
 <body>
 <div class="container">
     <?php require_once "vue/menu.php"; ?>
-    <section>
+    <section >
+
         <!--Ajout d'un tableau pour permettre de prendre le premier objet -->
         <article>
             <h1><?= $recuptous[0]->clintitule ?></h1>
         </article>
 
-        <article>
+        <div class="row">
+<div class="col-lg-12">
 
-            <?php
-            foreach ($recuptous as $rec) { ?>
-                <h2><?= $rec->plintitule ?> | <?= $rec->nb ?></h2>
-                <p><a><?= $rec->img ?></p></a>
+
                 <?php
-                $titre = explode('|||', $rec->titre);
-                $desc = explode('|||', $rec->ladescrecette);
-                $id = explode(',', $rec->idrecette);
-                foreach ($id as $clef => $val) {
-                    echo "<h3>" . $titre[$clef] . "</h3>";
-                    echo "<p>" . $desc[$clef] . " ... </p>";
-                    echo "<a href='?idrecette=$val'>Lire la suite</a>";
-                }
+                foreach ($recuptous as $rec) { ?>
+    <article class="col-xs-12 col-sm-6 col-md-4">
+                    <h2><?= $rec->plintitule ?> | <?= $rec->nb ?></h2>
+                    <img class="img-responsive" src="<?= $rec->img ?>"/>
+                    <?php
+                    $titre = explode('|||', $rec->titre);
+                    $desc = explode('|||', $rec->ladescrecette);
+                    $id = explode(',', $rec->idrecette);
+                    foreach ($id as $clef => $val) {
+                        echo "<h3>" . $titre[$clef] . "</h3>";
+                        echo "<p>" . $desc[$clef] . " ... </p>";
+                        echo "<a href='?idrecette=$val'>Lire la suite</a>";
+                    }
+                    ?>
+    </article>
+                <?php }
                 ?>
 
-            <?php }
-            ?>
-        </article>
+
+</div>
+        </div>
     </section>
     <?php
     include "vue/footer.php";
