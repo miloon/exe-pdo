@@ -1,47 +1,56 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <title>titre</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/png" href="vue/img/favicon.ico"/>
     <link href="stylesheet.css" rel="stylesheet" type="text/css"/>
+    <!-- Lien vers la CSS de Bootstrap -->
+    <link href="vue/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- HTML5 shim et Respond.js pour le support des éléments HTML5 et des media queries dans IE8 -->
+    <!-- ATTENTION: Respond.js ne fonctionne pas si on lit la page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <title><?= $titre ?></title>
     <!-- Ajout du .js pour le toggle -->
     <script type="text/javascript" src='https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js'></script>
 
 </head>
 <body>
-<?php require_once "vue/menu.php"; ?>
-<section>
-    <!--Ajout d'un tableau pour permettre de prendre le premier objet -->
-    <article>
-        <h1><?= $recuptous[0]->clintitule ?></h1>
-    </article>
+<div class="container">
+    <?php require_once "vue/menu.php"; ?>
+    <section>
+        <!--Ajout d'un tableau pour permettre de prendre le premier objet -->
+        <article>
+            <h1><?= $recuptous[0]->clintitule ?></h1>
+        </article>
 
-    <article>
+        <article>
 
-        <?php
-        foreach ($recuptous as $rec) { ?>
-            <h1><?= $rec->plintitule ?> | <?= $rec->nb ?></h1>
-            <p><a><?= $rec->img ?></p></a>
-        <?php
-            $titre = explode('|||',$rec->titre);
-            $desc = explode('|||',$rec->ladescrecette);
-            $id = explode(',',$rec->idrecette);
-            foreach($id as $clef => $val){
-                echo "<h3>".$titre[$clef]."</h3>";
-                echo "<p>".$desc[$clef]." ... </p>";
-                echo "<a href='?idrecette=$val'>Lire la suite</a>";
-            }
+            <?php
+            foreach ($recuptous as $rec) { ?>
+                <h2><?= $rec->plintitule ?> | <?= $rec->nb ?></h2>
+                <p><a><?= $rec->img ?></p></a>
+                <?php
+                $titre = explode('|||', $rec->titre);
+                $desc = explode('|||', $rec->ladescrecette);
+                $id = explode(',', $rec->idrecette);
+                foreach ($id as $clef => $val) {
+                    echo "<h3>" . $titre[$clef] . "</h3>";
+                    echo "<p>" . $desc[$clef] . " ... </p>";
+                    echo "<a href='?idrecette=$val'>Lire la suite</a>";
+                }
+                ?>
 
-        ?>
-
-        <?php }
-        ?>
-    </article>
-
-
-
-</section>
-
+            <?php }
+            ?>
+        </article>
+    </section>
+    <?php
+    include "vue/footer.php";
+    ?>
 </body>
 </html>

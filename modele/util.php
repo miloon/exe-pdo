@@ -4,7 +4,7 @@ $requete = $connexion->prepare("SELECT u.login, u.ladesc, r.id AS idrecette, r.t
 FROM util u
 INNER JOIN recette r
 ON u.id = r.util_id
-WHERE u.id = 3;");
+WHERE u.id = $util;");
 
 // exécution de la requête
 $requete->execute();

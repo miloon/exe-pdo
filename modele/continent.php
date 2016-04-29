@@ -37,7 +37,7 @@ $recuptous= $recup->fetchAll(PDO::FETCH_OBJ);
 
 $nb = $recup->rowCount();
 
-
+$titre = $recuptous[0]->clintitule;
 
 
 

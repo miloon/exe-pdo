@@ -59,3 +59,6 @@ carte cliquable en map + listes des 5 dernières recettes en aléatoire
 
 
 +++ Vérification par Michaël 2016-04-22 10h00
+
++++ MESSAGES D'ERREUR
+Warning: mail(): Failed to connect to mailserver at "127.0.0.1" port 25, verify your "SMTP" and "smtp_port" setting in php.ini or use ini_set() in modele\contact.php on line 21
