@@ -1,5 +1,12 @@
 # exe-pdo
 exercice de groupe 
+thème "Recettes du monde"
+
++++ Structure de la DB +++
+=> HAYAT
+
++++ Données de la DB +++
+=> EMILY (pour voir les bugs et s'assurer du bon affichage des pages)
 
 +++ ROUTEUR public +++
 => HAYAT
@@ -19,7 +26,6 @@ carte cliquable en map + listes des 5 dernières recettes en aléatoire
 // pour l'affichage, on va faire ça sous forme de vignettes avec l'image du pays, le nom du pays, la desc courtes et les titres des 3 derniers articles.
 
 [détail pays] => MIKE
-
 - IMG du pays
 - Titre pays
 - Ladesc pays => en toggle
@@ -45,6 +51,7 @@ carte cliquable en map + listes des 5 dernières recettes en aléatoire
 - accueil
 - continents => pays => recettes
 - déconnexion
+- // edit => on va faire un menu admin avec accueil + ajout + modif/sup + déconnexion
 
 [FOOTER] => MIKE
 - crédit (une page qui parle de nous qu'on a fait le site) => EMILY
@@ -56,9 +63,15 @@ carte cliquable en map + listes des 5 dernières recettes en aléatoire
 [Admin Ajout d'article] => HAYAT
 
 [Admin modif/sup] => EMILY
+- panneau d'administration pour les articles + filtres
+- panneau d'administration pour les pays + filtres
+- pages d'édition pour les articles avec message de succès ou d'erreur
+- pages d'édition pour les pays avec message de succès ou d'erreur
 
 
 +++ Vérification par Michaël 2016-04-22 10h00
 
 +++ MESSAGES D'ERREUR
+
+
 Warning: mail(): Failed to connect to mailserver at "127.0.0.1" port 25, verify your "SMTP" and "smtp_port" setting in php.ini or use ini_set() in modele\contact.php on line 21
