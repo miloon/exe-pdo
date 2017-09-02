@@ -2,66 +2,66 @@
 exercice de groupe sur le thème "Recettes du monde"
 
 ### Structure de la DB
-=> HAYAT
+=> Hayat
 
 ### Données de la DB
-=> EMILY (pour voir les bugs et s'assurer du bon affichage des pages)
+=> Miloon (pour voir les bugs et s'assurer du bon affichage des pages)
 
 ### ROUTEUR public
-=> HAYAT
+=> Hayat
 
 ### ROUTEUR admin
-=> MIKE
+=> Mike
 
 ### AFFICHAGE public
 
-#### [accueil] => EMILY
+#### [accueil] => Miloon
 carte cliquable en map + listes des 5 dernières recettes en aléatoire
 // pour l'affichage, on va mettre que le header, pas de menu de navigation (la carte suffira)
 
-#### [détail continent] => HAYAT
+#### [détail continent] => Hayat
 - Titre continent 
 - Liste des pays du continent : titre pays + ladesc pays (1 à 200 caractères) + nombre total de recettes relatives au pays.
 // pour l'affichage, on va faire ça sous forme de vignettes avec l'image du pays, le nom du pays, la desc courtes et les titres des 3 derniers articles.
 
-#### [détail pays] => MIKE
+#### [détail pays] => Mike
 - IMG du pays
 - Titre pays
 - Ladesc pays => en toggle
 - Recettes du pays classées par date DESC
 
-#### [détail recettes] => EMILY
+#### [détail recettes] => Miloon
 - Titre
 - Ladesc (nl2br)
 - la date
 - en bas de la page, on fait un module pour afficher l'auteur, sa bio et ses derniers articles.
 
-#### [détail utilisateur / profil] => EMILY
+#### [détail utilisateur / profil] => Miloon
 - Pseudo
 - ladesc
 - liste des articles écrits par l'utilisateur
 
-#### [MENU PUBLIC HORIZONTAL] => HAYAT
+#### [MENU PUBLIC HORIZONTAL] => Hayat
 - accueil
 - continents => pays => recettes
 - connexion
 
-#### [MENU ADMIN VERTICAL] => MIKE en toggle
+#### [MENU ADMIN VERTICAL] => Mike en toggle
 - accueil
 - continents => pays => recettes
 - déconnexion
 - // edit => on va faire un menu admin avec accueil + ajout + modif/sup + déconnexion
 
-#### [FOOTER] => MIKE
+#### [FOOTER] => Mike
 - crédit (une page qui parle de nous qu'on a fait le site) => EMILY
 - contact (pour nous contacter en cas de bugs) => EMILY
 
 
-#### PAGE CONNEXION +++ => MIKE
+#### PAGE CONNEXION +++ => Mike
 
-#### [Admin Ajout d'article] => HAYAT
+#### [Admin Ajout d'article] => Hayat
 
-#### [Admin modif/sup] => EMILY
+#### [Admin modif/sup] => Miloon
 - panneau d'administration pour les articles + filtres
 - panneau d'administration pour les pays + filtres
 - pages d'édition pour les articles avec message de succès ou d'erreur
@@ -69,6 +69,3 @@ carte cliquable en map + listes des 5 dernières recettes en aléatoire
 
 
 #### Vérification par Michaël 2016-04-22 10h00
-
-#### MESSAGES D'ERREUR À VÉRIFIER
-Warning: mail(): Failed to connect to mailserver at "127.0.0.1" port 25, verify your "SMTP" and "smtp_port" setting in php.ini or use ini_set() in modele\contact.php on line 21
